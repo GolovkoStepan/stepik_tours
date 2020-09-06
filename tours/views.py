@@ -29,6 +29,7 @@ class DepartureView(View):
             "description": description,
             "departures": departures,
             "departure": departures[departure],
+            "current_departure_key": departure,
             "tours": tours_by_departure,
             "tours_count": len(tours_by_departure),
             "min_price": min(tours_prices),

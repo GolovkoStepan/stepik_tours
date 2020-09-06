@@ -1,5 +1,13 @@
 {% extends 'tours/base.html' %}
 
+{% block links %}
+    {% for key, value in departures.items %}
+        <li class="nav-item">
+            <a class="nav-link {% if current_departure_key == key %} active{% endif %}" href="/departure/{{ key }}" data-test="navlink">{{ value }}</a>
+        </li>
+    {% endfor %}
+{% endblock %}
+
 {% block banner %}{% endblock %}
 
 {% block content %}
